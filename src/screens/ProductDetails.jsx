@@ -240,6 +240,7 @@ const ProductDetails = ({ route: { params } }) => {
 
             {console.log("Product Details Trying to Call Carousel")}
 
+       
             <Carousel
                 layout='stack'
                 sliderWidth={CAROUSEL_WIDTH}
@@ -247,9 +248,9 @@ const ProductDetails = ({ route: { params } }) => {
                 ref={isCarousel}
                 data={images}
                 renderItem={CarouselCardItem}
-                
             />
             {/* /* Carousel */}
+     
 
 
             <ScrollView 
@@ -511,8 +512,8 @@ const CarouselCardItem = ({ item, index }) => (
 const style = StyleSheet.create({
     container: {
 
-        paddingTop: 100,
-        height: 100,
+        top: 60,
+ 
         alignItems: 'center',
         justifyContent: 'center'
     },

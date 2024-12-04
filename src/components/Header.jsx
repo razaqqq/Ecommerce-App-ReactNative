@@ -68,7 +68,9 @@ const Header = ({ back, emptyCart = false }) => {
                         <Avatar.Icon
                             size={100}
                             style={{
-                                backgroundColor: colors.color4
+                                backgroundColor: colors.color4,
+                               
+                                top: route.name === "CART" ? 50 : 0,
                             }}
                             icon={emptyCart ? "delete-outline" : "cart-outline"}
                             color={

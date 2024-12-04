@@ -114,7 +114,7 @@ const ChatDashboard = () => {
                 <View
                     style={{
                         width: "100%",
-                        height: 80,
+                        height: 50,
                         backgroundColor: colors.color3,
                         flexDirection: "row",
                         justifyContent: "space-between",
@@ -195,7 +195,7 @@ const ChatDashboard = () => {
                         borderRadius: 20,
                         flexDirection: "row",
                         justifyContent: "flex-start",
-                        marginVertical: 10,
+                        marginVertical: 20,
                         marginHorizontal: 20,
                         paddingHorizontal: 5
                     }}

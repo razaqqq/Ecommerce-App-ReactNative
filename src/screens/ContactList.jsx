@@ -89,7 +89,7 @@ const ContactList = () => {
                         flexDirection: "row",
                         justifyContent: "space-around",
                         backgroundColor: colors.color3,
-                        height: 80,
+                        height: 50,
          
                     }}
                 >
@@ -102,7 +102,7 @@ const ContactList = () => {
                     >
                         <Avatar.Icon
                             icon={"magnify"}
-                            size={50}
+                            size={40}
                         />
                     </View>
                     <View
@@ -129,7 +129,7 @@ const ContactList = () => {
                         }}
                     >
                         <Avatar.Icon
-                            size={50}
+                            size={40}
                             icon={"magnify"} />
                     </View>
                 </View>
@@ -137,7 +137,7 @@ const ContactList = () => {
                     style={{
                         flexDirection: "row",
                         justifyContent: "space-around",
-                        height: 80,
+                        height: 60,
                         borderTopStartRadius: 40,
                         borderBottomStartRadius: 40,
                         borderTopEndRadius: 40,
@@ -156,7 +156,7 @@ const ContactList = () => {
                     >
                         <Avatar.Icon
                             icon={"phone"}
-                            size={50}
+                            size={40}
                         />
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -167,7 +167,7 @@ const ContactList = () => {
                         }}
                     >
                         <Avatar.Icon
-                            size={50}
+                            size={40}
                             icon={"star"}
                         />
                     </TouchableOpacity>
@@ -179,7 +179,7 @@ const ContactList = () => {
                         }}
                     >
                         <Avatar.Icon
-                            size={50}
+                            size={40}
                             icon={"account-group"}
                         />
                     </TouchableOpacity>

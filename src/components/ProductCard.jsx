@@ -52,31 +52,41 @@ const ProductCard = ({
                     alignItems: "center",
                     justifyContent: "space-between",
                     margin: 20,
-                    borderRadius: 20,
+                    borderRadius: 10,
                     height: 400,
                     backgroundColor: index % 2 === 0 ? colors.color1 : colors.color2
                 }}
             >
+              
                 <Image
                     src={image}
                     style={{
                         width: 200,
-                        height: 230,
+                        height: 240,
 
                         resizeMode: "cover",
                         position: "absolute",
                         left: 60,
-                        top: 80,
-                        borderRadius: 30
+                        top: 90,
+                        borderBottomRightRadius: 30,
+                        borderTopLeftRadius: 30,
+                        borderTopRightRadius: 30,
                     }}
                 />
+           
 
                 <View
                     style={{
                         flexDirection: "row",
-                        padding: 20,
-                        justifyContent: "space-between",
-                        width: "100%"
+                        padding: 5,
+                        top: 30,
+                        paddingLeft: 30, 
+                        justifyContent: "flex-start",
+                        alignContent: 'center',
+                        alignItems: 'center',
+            
+                        width: "100%",
+                        backgroundColor: index % 2 === 0 ? colors.color3 : colors.color4
                     }}
                 >
                     <Text
@@ -88,6 +98,9 @@ const ProductCard = ({
 
                         }}
                     >{name}</Text>
+                    <View style={{
+                        width: 10
+                    }}/>
                     <Text
                         numberOfLines={2}
                         style={{
@@ -103,8 +116,8 @@ const ProductCard = ({
                         backgroundColor: index % 2 === 0 ? colors.color2 : colors.color3,
                         borderRadius: 0,
                         padding: 10,
-                        borderBottomRightRadius: 20,
-                        borderBottomLeftRadius: 20,
+                        borderBottomRightRadius: 10,
+                        borderBottomLeftRadius: 10,
                         width: "100%"
 
                     }}

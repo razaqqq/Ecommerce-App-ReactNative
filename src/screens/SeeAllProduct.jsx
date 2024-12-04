@@ -37,7 +37,7 @@ const SeeAllProduct = ({ route }) => {
     const screenHeight = Dimensions.get("window").height
 
     const tileWidth = screenWidth / 2 - 20
-    const tileheight = screenHeight / 2 - 30
+    const tileheight = screenHeight / 2 - 80
 
     const dispatch = useDispatch()
     const isFocused = useIsFocused()

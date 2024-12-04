@@ -121,16 +121,21 @@ const Home = () => {
                 {/* /*Header*/}
 
                 <View
-
                     style={{
                         position: "absolute",
-                        right: 30,
+                        right: 10,
                         top: 20,
                         backgroundColor: colors.color1_light1,
                         width: 150,
                         height: 30,
-                        borderRadius: 10,
-                        elevation: 5
+    
+                        shadowColor: '#000',
+                        shadowOffset: { width: 0, height: 1 },
+                        shadowOpacity: 0.8,
+                        shadowRadius: 2,  
+                        elevation: 20,
+                        borderRadius: 30
+
 
                     }}
                 >
@@ -154,17 +159,13 @@ const Home = () => {
                 </View>
                 {/* /* Headeing-Row */}
                 <View style={{
-                    paddingTop: 20,
+                    paddingTop: 40,
                     flexDirection: 'row',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    marginHorizontal: 45
+                    marginHorizontal: 30
                 }}>
-
-
-
                     <Heading />
-
                     {/* /* Search-Bar */}
                     <View>
                         <TouchableOpacity
@@ -187,7 +188,7 @@ const Home = () => {
                 <View style={{
                     flexDirection: 'row',
                     height: 80,
-                    marginLeft: 10
+                    marginLeft: 30
                 }}>
 
                     <ScrollView
@@ -223,16 +224,17 @@ const Home = () => {
                 {/* /* Products */}
                 <View style={{
                     flex: 1,
-                    marginTop: 20
-                }}>
+                    marginTop: 20,
+                    
 
+                }}>
                     <ScrollView
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}
                         showsVerticalScrollIndicator={false}
+                        
                     >
                         {
-
                             products.map((product, index) => (
                                 <ProductCard
                                     stock={product.stock}
@@ -248,157 +250,12 @@ const Home = () => {
                             ))
                         }
                     </ScrollView>
+                   
 
                 </View>
                 {/* /* Products */}
 
-                <TouchableOpacity
-                    style={{
-                        position: "absolute",
-                        bottom: 90,
-                        right: 30,
-                        width: 40,
-                        height: 40,
-                        borderRadius: 40,
-                        backgroundColor: colors.color1,
-                        borderWidth: 2,
-                        borderColor: colors.color3,
-                        justifyContent: "center",
-                        alignContent: "center",
-                        alignSelf: "center"
-                    }}
-                    onPress={showHelpBottomMethod}
-                >
-                    <Avatar.Icon
-                        icon={"account-question"}
-                        size={40}
-                        color={colors.color2}
-                        style={{
-                            backgroundColor: colors.transparentCustom,
-                            justifyContent: "center",
-                            alignContent: "center",
-                            alignSelf: "center"
-                        }}
-                    />
-                </TouchableOpacity>
-
-                {
-                    showHelpBottom ? (
-                        <View
-                            style={{
-                                position: "absolute",
-                                right: 90,
-                                bottom: 90,
-                                width: "auto",
-                                height: 40,
-
-                                flexDirection: "row",
-                                justifyContent: "space-around",
-                                alignContent: "center",
-                                alignSelf: "center"
-                            }}
-                        >
-                            <View
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    borderRadius: 40,
-                                    backgroundColor: colors.color1,
-                                    justifyContent: "center",
-                                    alignContent: "center",
-                                    alignSelf: "center",
-                                    marginHorizontal: 5
-                                }}
-                            >
-                                <Avatar.Icon
-                                    icon={"help-rhombus"}
-                                    size={40}
-                                    color={colors.color2}
-                                    style={{
-                                        backgroundColor: colors.color1,
-                                        justifyContent: "center",
-                                        alignContent: "center",
-                                        alignSelf: "center"
-                                    }}
-                                />
-                            </View>
-                            <View
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    borderRadius: 40,
-                                    backgroundColor: colors.color1,
-                                    justifyContent: "center",
-                                    alignContent: "center",
-                                    alignSelf: "center",
-                                    marginHorizontal: 5
-                                }}
-                            >
-                                <Avatar.Icon
-                                    icon={"phone"}
-                                    size={40}
-                                    color={colors.color2}
-                                    style={{
-                                        backgroundColor: colors.color1,
-                                        justifyContent: "center",
-                                        alignContent: "center",
-                                        alignSelf: "center"
-                                    }}
-                                />
-                            </View>
-                            <View
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    borderRadius: 40,
-                                    backgroundColor: colors.color1,
-                                    justifyContent: "center",
-                                    alignContent: "center",
-                                    alignSelf: "center",
-                                    marginHorizontal: 5
-                                }}
-                            >
-                                <Avatar.Icon
-                                    icon={"account"}
-                                    size={40}
-                                    color={colors.color2}
-                                    style={{
-                                        backgroundColor: colors.color1,
-                                        justifyContent: "center",
-                                        alignContent: "center",
-                                        alignSelf: "center"
-                                    }}
-                                />
-                            </View>
-                            <View
-                                style={{
-                                    width: 40,
-                                    height: 40,
-                                    borderRadius: 40,
-                                    backgroundColor: colors.color1,
-                                    justifyContent: "center",
-                                    alignContent: "center",
-                                    alignSelf: "center",
-                                    marginHorizontal: 5
-                                }}
-                            >
-                                <Avatar.Icon
-                                    icon={"plus"}
-                                    size={40}
-                                    color={colors.color2}
-                                    style={{
-                                        backgroundColor: colors.color1,
-                                        justifyContent: "center",
-                                        alignContent: "center",
-                                        alignSelf: "center"
-                                    }}
-                                />
-                            </View>
-                        </View>
-                    ) : (
-                        <View></View>
-                    )
-                }
+                
 
 
 
