@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, Text, TouchableOpacity, View } from "react-native"
+import { SafeAreaView, ScrollView, Text, TouchableOpacity, View, Image } from "react-native"
 import { colors } from "../styles/styles"
 import { Avatar, Button, TextInput } from "react-native-paper"
 import ChatItemShow from "../components/ChatItemShow"
@@ -91,10 +91,12 @@ const dummyChats = [
 ]
 
 const ChatPage = ({
-    name,
-
+    route
 }) => {
     console.log(`Chat Page Logging`)
+    const { name, image } = route.params
+
+    console.log(image)
 
     navigate = useNavigation()
 
@@ -116,7 +118,7 @@ const ChatPage = ({
                 style={{
                     position: "absolute",
                     elevation: 1,
-                    height: 100,
+                    height: 60,
                     backgroundColor: colors.color2,
                     top: 0,
                     zIndex: 20,
@@ -125,7 +127,7 @@ const ChatPage = ({
                     justifyContent: "space-between",
                     paddingHorizontal: 10,
                     alignContent: "center",
-                    paddingTop: 30
+  
                 }}
             >
                 <TouchableOpacity
@@ -171,6 +173,7 @@ const ChatPage = ({
                         {name}
                     </Text>
                 </View>
+               
                 <View
                     style={{
                         flexDirection: "row",
@@ -203,24 +206,23 @@ const ChatPage = ({
                             justifyContent: "center",
                             alignContent: "center",
                             alignSelf: "center",
-
                         }}
                     >
-
+                       <Image
+                        style={{
+                            width: 40,
+                            height: 40,
+                            borderRadius: 80,
+                            zIndex: 10,
+                            justifyContent: "center",
+                            alignContent: "center",
+                            alignSelf: "center",
+                        }}
+                        source={{
+                            uri: image
+                        }}
+                    />
                     </View>
-                    <TouchableOpacity>
-                        <Avatar.Icon
-                            size={50}
-                            color={colors.color3}
-                            icon={"record"}
-                            style={{
-                                justifyContent: "center",
-                                alignContent: "center",
-                                alignSelf: "center",
-                                backgroundColor: colors.transparentCustom
-                            }}
-                        />
-                    </TouchableOpacity>
                 </View>
             </View>
             <View

@@ -8,9 +8,11 @@ import { useState } from "react"
 
 
 
-const ChatProfileNotUser = () => {
+const ChatProfileNotUser = ({route}) => {
 
     const navigate = useNavigation()
+
+    const { image, name, description } = route.params
 
     const [follow, setFollow] = useState(false)
     const [followVisible, setFollowVisible] = useState(false)
@@ -48,7 +50,7 @@ const ChatProfileNotUser = () => {
                         width: "100%",
                         height: "100%"
                     }}
-                    source={{ uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Hopetoun_falls.jpg/640px-Hopetoun_falls.jpg" }}
+                    source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQND2a9sOYPJOwpujOPLEOIwgOaOlZRI4Y5hg&s" }}
                 />
             </View>
             <View
@@ -71,7 +73,7 @@ const ChatProfileNotUser = () => {
                         alignSelf: "center",
                         marginTop: -80
                     }}
-                    source={{ uri: "https://qph.cf2.quoracdn.net/main-qimg-2e0dec51a8fc83da433bf163cbe56f04-lq" }}
+                    source={{ uri: image }}
                 />
                 <View
                     style={{
@@ -87,7 +89,7 @@ const ChatProfileNotUser = () => {
                             fontWeight: "bold",
                             color: colors.color3
                         }}
-                    >Anne Lovely</Text>
+                    >{name}</Text>
                 </View>
                 <View
                     style={{
@@ -106,7 +108,7 @@ const ChatProfileNotUser = () => {
                             fontSize: 18
                         }}
                     >
-                        Designer, Cat Lover, Book Worm, Apple Pie Fanatic and Nature Enthusiast
+                        {description}
                     </Text>
                 </View>
                 <View
@@ -307,7 +309,9 @@ const ChatProfileNotUser = () => {
                         flex: 1,
                         backgroundColor: colors.greenMedium
                     }}
-                    onPress={() => navigate.navigate("CHAT")}
+                    onPress={() => navigate.navigate("CHAT", {
+                        "name": name, "image": image
+                    })}
                 >
                     <Avatar.Icon
                         icon={"message"}
@@ -322,11 +326,14 @@ const ChatProfileNotUser = () => {
                     />
 
                 </TouchableOpacity>
-                <View
+                <TouchableOpacity
                     style={{
                         flex: 1,
                         backgroundColor: colors.greenLight
                     }}
+                    onPress={() => navigate.navigate("CALL-PAGE", {
+                        "image": image, "name": name, "description": description
+                    })}
                 >
                     <Avatar.Icon
                         icon={"phone"}
@@ -339,7 +346,7 @@ const ChatProfileNotUser = () => {
                             alignSelf: "center"
                         }}
                     />
-                </View>
+                </TouchableOpacity>
             </View>
 
             <Modal

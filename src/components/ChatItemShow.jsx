@@ -15,7 +15,7 @@ const ChatItemShow = ({
     return (
         <TouchableOpacity
             onPress={() => navigate.navigate("CHAT", {
-                "name": name
+                "name": name, "image": image
             })}
         >
             <View
@@ -58,19 +58,22 @@ const ChatItemShow = ({
                     <View
                         style={{
                             position: "absolute",
-                            width: 20,
-                            height: 20,
+                            width: 25,
+                            height: 25,
                             backgroundColor: colors.color1,
-                            top: -5,
-                            right: 10,
+                            top: 0,
+                            right: 0,
                             zIndex: 20,
-                            borderRadius: 20
+                            borderRadius: 20,
+                            justifyContent: "center",
+                            alignContent: "center",
+                            alignSelf: "center"
                         }}
                     >
                         {
                             MmessageSum > 0 ? (<Text
                                 style={{
-                                    fontSize: 12,
+                                    fontSize: 15,
                                     color: colors.color2,
                                     justifyContent: "center",
                                     alignContent: "center",

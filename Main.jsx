@@ -39,6 +39,8 @@ import CameraComponent from './src/screens/Admin/Camera'
 import ShopDetails from './src/screens/ShopDetails'
 import OtherFeatures from './src/screens/OtherFeatures'
 import ShopDetailNonUser from './src/screens/ShopDetailsNonUser'
+import CallPage from './src/screens/CallPage'
+import CallPage2 from './src/screens/CallPage2'
 
 
 
@@ -93,6 +95,8 @@ const Main = () => {
                     <Stack.Screen name="SHOP-DETAILS" component={ShopDetails} options={{ headerShown: false }} />
                     <Stack.Screen name="OTHER-FEATURES" component={OtherFeatures} options={{ headerShown: false }} />
                     <Stack.Screen name="SHOPE-DETAILS-NON-USER" component={ShopDetailNonUser} options={{ headerShown: false }} />
+                    <Stack.Screen name="CALL-PAGE" component={CallPage} options={{ headerShown: false }} />
+                    <Stack.Screen name="CALL-PAGE2" component={CallPage2} options={{ headerShown: false }} />
 
                     {/* ADMIN ROUTES */}
                     <Stack.Screen name="ADMIN-PANEL" component={AdminPanel} options={{ headerShown: false }} />

@@ -18,7 +18,9 @@ const ContactListItem = ({
 
     return (
         <TouchableOpacity
-            onPress={() => navigate.navigate("CHAT-PROFILE-NOT-USER")}
+            onPress={() => navigate.navigate("CHAT-PROFILE-NOT-USER", {
+                "image": image, "name":name, "description":description
+            })}
         >
             <View
                 style={{
